@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Sane file permissions: u=rwx,g=rx,o=
+umask 0027
+
 # Set environment variables
 HISTCONTROL=ignoreboth
 HISTSIZE=10000

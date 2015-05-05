@@ -1,5 +1,6 @@
-# Based on @octocat/.gitignore
+# Based on @octocat/.gitignore[1] and @gsnedders/gitignore/Python.gitignore[2]
 # https://gist.github.com/octocat/9257657
+# https://github.com/github/gitignore/blob/master/Python.gitignore
 
 #########################################
 
@@ -47,6 +48,8 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
+.desktop
 
 # Filesystem and User notes #
 #############################
@@ -79,6 +82,8 @@ nbproject
 .project
 .settings
 composer.lock
+.classpath
+.metadata
 
 # Python related #
 ##################

@@ -21,8 +21,12 @@ shopt -s histappend
 shopt -s checkwinsize
 shopt -s mailwarn
 
-# Define aliases
+# Define useful aliases
 alias ls='ls --color=auto'
+
+# Define lazy aliases
+alias startplex='sudo systemctl start plexmediaserver'
+alias stopplex='sudo systemctl stop plexmediaserver'
 
 # Customise prompt
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'

@@ -23,6 +23,7 @@ shopt -s mailwarn
 
 # Define useful aliases
 alias ls='ls --color=auto'
+alias rmed='find -type d -empty -delete'
 
 # Define lazy aliases
 alias startplex='sudo systemctl start plexmediaserver'

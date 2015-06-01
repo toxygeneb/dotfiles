@@ -1,2 +1,2 @@
 # dotfiles
-Stop loosing them!
+Stop losing them!

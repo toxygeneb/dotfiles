@@ -14,6 +14,9 @@
 # Source .bash_tput if exists
 [ -r $HOME/.bash_tput ] && . $HOME/.bash_tput
 
+# fuck
+eval $(thefuck --alias)
+
 # Sane file permissions: u=rwx,g=rx,o=
 umask 0027
 
@@ -64,11 +67,7 @@ ipaddr
 echo
 df -h | sed -n '1p;/mapper/p'
 echo
-echo /
-btrfs filesystem df /
-echo
-echo /home
-btrfs filesystem df /home
+sudo btrfs fi show
 
 # Fortune cookies
 echo

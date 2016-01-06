@@ -113,7 +113,7 @@ dirsize() {
 
 # Save PNG of current window
 snap() {
-  import -frame -strip -quality 75 "$WINCAPTUREDIR/$(date +%F-%H%M%S).png"
+  import -strip -quality 75 "$WINCAPTUREDIR/$(date +%F-%H%M%S).png"
 }
 
 # Backup file

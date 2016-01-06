@@ -49,22 +49,13 @@ alias stopplex='sudo systemctl stop plexmediaserver'
 
 # Customise prompt
 #PS1='[\u@\h \W]\$ '
-
-export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007" & history -a;$PROMPT_COMMAND'
+export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
+export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 PS1='\n[\W\[\e[0m\]]\n[\[\e[0;32m\]\u@\h\[\e[0;36m\]]\$ '
 
 # Show useful info to user
 
 echo 
-
-# Set default browser if X is running
-if [ "$DISPLAY" ]
-then
-  xdg-settings set default-web-browser google-chrome-stable.desktop
-  echo "Attempting to set Google Chrome as default browser."
-else
-  echo "No X session running."
-fi
 
 # IP Address
 ipaddr

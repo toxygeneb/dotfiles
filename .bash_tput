@@ -1,0 +1,17 @@
+#
+# ~/.bash_tput
+#
+
+txtund=$(tput sgr 0 1)          # Underline
+txtbld=$(tput bold)             # Bold
+
+txtblk=$(tput setaf 0)          # Black / Dark Grey
+txtred=$(tput setaf 1)          # Red / Light Red
+txtgrn=$(tput setaf 2)          # Green / Light Green
+txtylw=$(tput setaf 3)          # Yellow / Light Yellow
+txtblu=$(tput setaf 4)          # Blue / Light Blue
+txtmgt=$(tput setaf 5)          # Magenta / Light Magenta
+txtcyn=$(tput setaf 6)          # Cyan / Light Cyan
+txtwht=$(tput setaf 7)          # Light Grey / White
+
+txtrst=$(tput sgr0)             # Reset

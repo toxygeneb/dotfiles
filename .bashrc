@@ -2,9 +2,6 @@
 # ~/.bashrc
 #
 
-# TODO: switch to tput for terminal manipulation
-
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -14,6 +11,9 @@
 # Source .bash_functions if exists
 [ -r $HOME/.bash_functions ] && . $HOME/.bash_functions
 
+# Source .bash_tput if exists
+[ -r $HOME/.bash_tput ] && . $HOME/.bash_tput
+
 # Sane file permissions: u=rwx,g=rx,o=
 umask 0027
 
@@ -21,7 +21,7 @@ umask 0027
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 export HISTFILESIZE=20000
-export HISTTIMEFORMAT="%h %d %H:%M:%S > "  # TODO: colourise time
+export HISTTIMEFORMAT="${txtcyn}%h %d ${txtgrn}%H:%M:%S ${txtrst}> "
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export PATH=$HOME/bin:$PATH
@@ -51,7 +51,7 @@ alias stopplex='sudo systemctl stop plexmediaserver'
 #PS1='[\u@\h \W]\$ '
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
-PS1='\n[\W\[\e[0m\]]\n[\[\e[0;32m\]\u@\h\[\e[0;36m\]]\$ '
+PS1='\n[${txtbld}${txtylw}\w${txtrst}]\n[${txtcyn}\u@\h${txtrst}] \$ '
 
 # Show useful info to user
 

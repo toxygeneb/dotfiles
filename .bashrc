@@ -54,7 +54,7 @@ alias stopplex='sudo systemctl stop plexmediaserver'
 #PS1='[\u@\h \W]\$ '
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
-PS1='\n[${txtbld}${txtylw}\w${txtrst}]\n[${txtcyn}\u@\h${txtrst}] \$ '
+PS1='\n[${txtmgt}\w${txtrst}]\n[${txtcyn}\u@\h${txtrst}] \$ '
 
 # Show useful info to user
 
@@ -64,10 +64,10 @@ echo
 ipaddr
 
 # Filesystem space (colourise later)
+#echo
+#df -h | sed -n '1p;/mapper/p'
 echo
-df -h | sed -n '1p;/mapper/p'
-echo
-sudo btrfs fi show
+sudo btrfs fi show | sed -n '/mapper/p;' | cut -d " " -f 4-
 
 # Fortune cookies
 echo

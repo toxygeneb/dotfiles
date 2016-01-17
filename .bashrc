@@ -24,7 +24,7 @@ umask 0027
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 export HISTFILESIZE=20000
-export HISTTIMEFORMAT="${txtcyn}%h %d ${txtgrn}%H:%M:%S ${txtrst}> "
+export HISTTIMEFORMAT="${txtcyn}%h %d ${txtgrn}%H:%M:%S ${txtwht}> "
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export PATH=$HOME/bin:$PATH
@@ -54,7 +54,7 @@ alias stopplex='sudo systemctl stop plexmediaserver'
 #PS1='[\u@\h \W]\$ '
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
-PS1='\n[${txtmgt}\w${txtrst}]\n[${txtcyn}\u@\h${txtrst}] \$ '
+PS1='\n[${txtmgt}\w${txtwht}]\n[${txtcyn}\u@\h${txtwht}] \$ '
 
 # Show useful info to user
 
@@ -64,8 +64,6 @@ echo
 ipaddr
 
 # Filesystem space (colourise later)
-#echo
-#df -h | sed -n '1p;/mapper/p'
 echo
 sudo btrfs fi show | sed -n '/mapper/p;' | cut -d " " -f 4-
 

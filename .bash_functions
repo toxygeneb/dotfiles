@@ -3,6 +3,7 @@
 #
 
 # TODO: modify urband to take entry number
+# TODO: consistent formatting and output
 
 # IP Address
 ipaddr() {
@@ -28,7 +29,7 @@ define() {
       echo "${response}"
     done < /tmp/lookup
   else
-    echo "Sorry, can't find \"${1} \""
+    echo "Sorry, can't find \"${1}\""
   fi    
   rm -f /tmp/lookout
 }

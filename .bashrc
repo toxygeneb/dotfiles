@@ -70,8 +70,8 @@ alias stopplex='sudo systemctl stop plexmediaserver'
 
 # Customise prompt
 #PS1='[\u@\h \W] \$ '
-export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
-export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+#export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
+#export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 #PS1='\n[${txtmgt}\w${txtwht}]\n[${txtcyn}\u@\h${txtwht}] \$ '
 
 # Show useful info to user

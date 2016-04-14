@@ -5,9 +5,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# If $HOME/bin exists and isn't on $PATH, add it
+# If $HOME/bin exists and isn't on $PATH, prepend it
 if [ -d "$HOME/bin" ] && [[ ":$PATH:" != *":$HOME/bin:"* ]]; then
   PATH=$HOME/bin:$PATH
+fi
+
+# If $HOME/.local/bin exists and isn't on $PATH, append it
+if [ -d "$HOME/.local/bin" ] && [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+  PATH=$PATH:$HOME/.local/bin
 fi
 
 # Command-not-found (AUR)
@@ -26,7 +31,7 @@ eval $(thefuck --alias)
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. /usr/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
+. $HOME/.local/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
 
 # Sane file permissions: u=rwx,g=rx,o=
 umask 0027
@@ -40,6 +45,7 @@ export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
+export TERM=xterm-256color
 
 # Custom environment variables
 export SCREENSHOTDIR="$HOME/Pictures/Screenshots"

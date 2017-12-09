@@ -21,17 +21,8 @@ fi
 # Source .bash_functions if exists
 [ -r $HOME/.bash_functions ] && . $HOME/.bash_functions
 
-# Source .bash_tput if exists
-[ -r $HOME/.bash_tput ] && . $HOME/.bash_tput
-
 # fuck
 eval $(thefuck --alias)
-
-# Powerline
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. $HOME/.local/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
 
 # Sane file permissions: u=rwx,g=rx,o=
 umask 0027
@@ -69,10 +60,7 @@ alias startplex='sudo systemctl start plexmediaserver'
 alias stopplex='sudo systemctl stop plexmediaserver'
 
 # Customise prompt
-#PS1='[\u@\h \W] \$ '
-#export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
-#export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
-#PS1='\n[${txtmgt}\w${txtwht}]\n[${txtcyn}\u@\h${txtwht}] \$ '
+PS1='[\u@\h \W] \$ '
 
 # Show useful info to user
 

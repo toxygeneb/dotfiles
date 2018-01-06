@@ -14,7 +14,7 @@ set whichwrap=b,s,<,>,[,]
 set number
 set tw=78
 set nowrap
-set colorcolumn=80
+"set colorcolumn=80
 set ruler
 
 " Show command multiplier
@@ -63,7 +63,7 @@ augroup vimrcEx
 augroup END
 
 " Powerline
-set rtp+=/home/toxygeneb/.local/lib/python3.5/site-packages/powerline/bindings/vim
+let g:powerline_pycmd="py3"
 set laststatus=2
 set t_Co=256
 

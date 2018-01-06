@@ -34,7 +34,7 @@ umask 0027
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 export HISTFILESIZE=20000
-export HISTTIMEFORMAT="${txtcyn}%h %d ${txtgrn}%H:%M:%S ${txtwht}> "
+export HISTTIMEFORMAT="%h %d %H:%M:%S > "
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export LANG=en_GB.UTF-8
@@ -64,9 +64,15 @@ alias stopplex='sudo systemctl stop plexmediaserver'
 # Customise prompt
 PS1='[\u@\h \W] \$ '
 
+# Powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+
 # Show info to user
 
-echo 
+echo
 
 # IP Address
 ipaddr

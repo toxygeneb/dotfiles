@@ -62,7 +62,7 @@ alias startplex='sudo systemctl start plexmediaserver'
 alias stopplex='sudo systemctl stop plexmediaserver'
 
 # Customise prompt
-# PS1='[\u@\h \W] \$ '
+PS1='[\u@\h \W] \$ '
 
 # Powerline
 powerline-daemon -q

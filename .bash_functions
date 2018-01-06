@@ -13,12 +13,11 @@ ipaddr() {
 # IP Info
 ipinfo() {
   if grep -P "(([1-9]\d{0,2})\.){3}(?2)" <<< "$1"; then
-      curl ipinfo.io/"$1"
+      curl ipinfo.io/"$1"/ip
   else
     ipawk=($(host "$1" | awk '/address/ { print $NF }'))
-    curl ipinfo.io/${ipawk[1]}
+    curl ipinfo.io/${ipawk[1]}ip
   fi
-  echo
 }
 
 # Define a word

@@ -21,6 +21,9 @@ fi
 # Source .bash_functions if exists
 [ -r $HOME/.bash_functions ] && . $HOME/.bash_functions
 
+# Source .bash_tput if exists
+[ -r $HOME/.bash_tput ] && . $HOME/.bash_tput
+
 # fuck
 eval $(thefuck --alias)
 
@@ -36,7 +39,6 @@ export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
-export TERM=xterm-256color
 
 # Custom environment variables
 export SCREENSHOTDIR="$HOME/Pictures/Screenshots"
@@ -62,7 +64,7 @@ alias stopplex='sudo systemctl stop plexmediaserver'
 # Customise prompt
 PS1='[\u@\h \W] \$ '
 
-# Show useful info to user
+# Show info to user
 
 echo 
 

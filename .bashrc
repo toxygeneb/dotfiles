@@ -60,6 +60,7 @@ alias emacs='emacs -nw'
 # Define lazy aliases
 alias startplex='sudo systemctl start plexmediaserver'
 alias stopplex='sudo systemctl stop plexmediaserver'
+alias archwiki='lynx https://wiki.archlinux.org/'
 
 # Customise prompt
 PS1='[\u@\h \W] \$ '

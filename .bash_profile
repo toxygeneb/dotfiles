@@ -2,7 +2,7 @@
 # ~/.bash_profile
 #
 
-if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+if [[ ${TERM} != "tmux-256color"  ]]; then
   echo
   dmesg | grep microcode
 fi
